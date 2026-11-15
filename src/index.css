@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #070c1e;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(14, 25, 53, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-subtle {
+  background: rgba(18, 32, 68, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-interactive {
+  background: rgba(14, 25, 53, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(22, 38, 80, 0.85);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.25);
+}
+
+.glass-input {
+  background: rgba(11, 20, 43, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  border-color: #8b5cf6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  background: rgba(15, 27, 58, 0.9);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070c1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e387c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2c56b8;
+}
